@@ -1,0 +1,54 @@
+a{
+  text-decoration: none;
+}
+
+body{
+  background: linear-gradient(270deg, hsl(0, 0%, 98%), hsl(0, 0%, 78%))
+}
+
+.container{
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.text{
+  font-size: 2rem;
+}
+
+.text a{
+  color: hsl(0, 0%, 27%);
+  line-height: 5rem;
+  transition: 0.2s;
+}
+
+.text a:hover{
+  color: hsl(0, 0%, 19%);
+  font-size: 2.2rem;
+}
+
+.text p{
+  font-size: 2.5rem;
+  color: hsl(0, 0%, 40%);
+  margin-top: 0;
+}
+
+.container .title{
+  color: hsl(0, 41%, 10%);
+  font-size: 3.5rem;
+  margin-bottom:0;
+}
+
+/*======Scrollbar======*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(130, 65%, 88%);
+  border-radius: 5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(50, 75%, 53%);
+  border-radius: 5rem;
+}

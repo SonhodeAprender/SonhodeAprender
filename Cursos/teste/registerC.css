@@ -1,0 +1,217 @@
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+
+
+.wrapper {
+  position: relative;
+
+  display: flex;
+}
+
+/*======VARIABLES======*/
+:root {
+  --header-height: 4.5rem;
+
+  /*color*/
+  --hue: 130;
+  /*HSL color mode*/
+  --logo-color: hsl(50, 75%, 53%);
+  --base-color: hsl(var(--hue), 56%, 40%);
+  --base-color-second: hsl(var(--hue), 65%, 88%);
+  --base-color-alt: hsl(var(--hue), 57%, 53%);
+  --title-color: hsl(var(--hue), 41%, 10%);
+  --text-color: hsl(0 0% 46%);
+  --text-color-light: hsl(0 0% 98%);
+  --body-color: hsl(0 0% 98%);
+
+  --hue2: 50;
+  --logo-color2: hsl(50, 75%, 53%);
+  --base-color2: hsl(var(--hue2), 75%, 53%);
+  --base-color-second2: hsl(var(--hue2), 80%, 75%);
+  --base-color-alt2: hsl(var(--hue2), 85%, 50%);
+  --title-color2: hsl(var(--hue2), 41%, 10%);
+  --text-color2: hsl(0 0% 46%);
+  --text-color-light2: hsl(0 0% 98%);
+  --body-color2: hsl(0 0% 98%);
+
+  /*font*/
+  --title-font-size: 1.875rem;
+  --text-font-size: 1rem;
+  --toggle-font-size: 1.5rem;
+  --icon-font-size: 3.5rem;
+  --icon-font-size-second: 1.25rem;
+  --icon-title-font-size: 1.5rem;
+
+  /*size*/
+  --button-size: 3.5rem;
+
+  --margin-size: 1.5rem;
+}
+
+.text{
+  margin-top: 10rem;
+  text-align: center;
+  font: var(--text-font-size) sans-serif;
+}
+
+.text h1 {
+  text-align: center;
+  border-bottom: 1px solid var(--base-color2);
+  font: var(--title-font-size) sans-serif;
+}
+
+
+
+
+.input-box {
+  position: absolute;
+  width: 32rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+}
+
+.input-box .user-box {
+  position: relative;
+}
+
+.input-box .user-box input {
+  width: 100%;
+  padding: 0.625rem 1.25rem;
+  font: 1.5rem sans-serif;
+  color: black;
+}
+
+.input-box .user-box label {
+  width: 100%;
+  height: 100%;
+  padding: 0.625rem 0;
+  font: 1rem sans-serif;
+  color: black;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-box .user-box input:focus ~ label,
+.input-box .user-box input:valid ~ label {
+  top: -1.25rem;
+  left: 0;
+  color: var(--base-color);
+  font: 0.75rem sans-serif;
+}
+
+input {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--base-color);
+  color: var(--text-color);
+}
+
+.validation {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.7rem;
+  opacity: 0;
+  color: #fd4444;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(8px);
+  }
+  75% {
+    transform: translateX(-8px);
+  }
+}
+
+input:valid {
+  border-color: var(--base-color);
+}
+input:invalid {
+  border-color: #fd4444;
+}
+input:invalid ~ .validation {
+  opacity: 1;
+}
+input:invalid,
+input:invalid ~ .validation {
+  animation: shake 0.1635s 0s 3;
+}
+
+button {
+  margin-top: 1rem;
+  background-color: var(--base-color2);
+  border: none;
+  color: var(--text-color-light);
+  height: var(--button-size);
+  width: calc(var(--button-size) + 5rem);
+  position: relative;
+  margin-left: 12rem;
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+  font: var(--text-font-size) sans-serif;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: var(--base-color-alt2);
+}
+
+@media (max-width: 768px){
+  :root {
+    --header-height: 4.5rem;
+  
+    /*color*/
+    --hue: 130;
+    /*HSL color mode*/
+    --logo-color: hsl(50, 75%, 53%);
+    --base-color: hsl(var(--hue), 56%, 40%);
+    --base-color-second: hsl(var(--hue), 65%, 88%);
+    --base-color-alt: hsl(var(--hue), 57%, 53%);
+    --title-color: hsl(var(--hue), 41%, 10%);
+    --text-color: hsl(0 0% 46%);
+    --text-color-light: hsl(0 0% 98%);
+    --body-color: hsl(0 0% 98%);
+  
+    --hue2: 50;
+    --logo-color2: hsl(50, 75%, 53%);
+    --base-color2: hsl(var(--hue2), 75%, 53%);
+    --base-color-second2: hsl(var(--hue2), 80%, 75%);
+    --base-color-alt2: hsl(var(--hue2), 85%, 50%);
+    --title-color2: hsl(var(--hue2), 41%, 10%);
+    --text-color2: hsl(0 0% 46%);
+    --text-color-light2: hsl(0 0% 98%);
+    --body-color2: hsl(0 0% 98%);
+  
+    /*font*/
+    --title-font-size: 1.25rem;
+    --text-font-size: 0.75rem;
+    --toggle-font-size: 1.5rem;
+    --icon-font-size: 3.5rem;
+    --icon-font-size-second: 1.25rem;
+    --icon-title-font-size: 1.5rem;
+  
+    /*size*/
+    --button-size: 3.5rem;
+  
+    --margin-size: 1.5rem;
+  }
+  
+  .text{
+    margin-top: 5rem;
+  }
+  .input-box{
+    width: 80%;
+  }
+}
